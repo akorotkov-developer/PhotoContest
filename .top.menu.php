@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Информация о конкурсе", 
+		"#konkurs", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Победителям", 
+		"#bonus", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Участникам", 
+		"#conditions", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Этапы", 
+		"#stages", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Номинации", 
+		"#nominations", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Жюри", 
+		"#jury", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
