@@ -9,23 +9,7 @@ $FORM_ACTION_URI   = "";
 $WITH_FORM = strlen($arParams['WIDTH_FORM']) > 0 ? 'style="max-width:'.$arParams['WIDTH_FORM'].'"' : '';
 
 ?>
-<?if($arParams['NAME_MODAL_BUTTON']):?>
-    <div class="slam-easyform">
-        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal<?=$FORM_ID?>"><?=$arParams['NAME_MODAL_BUTTON']?></button>
-    </div>
-<?endif;?>
-<div class="slam-easyform<?=$arParams['HIDE_FORMVALIDATION_TEXT'] == 'Y' ? ' hide-formvalidation' : ''?>">
-    <div id="modal<?=$FORM_ID?>" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade modal-review">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <? if($arParams['FORM_NAME']): ?>
-                        <h5 class="modal-title" id="makeOrderLabel"><?=$arParams['FORM_NAME']?></h5>
-                    <? endif?>
-                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&#10006;</button>
-                </div>
-                <div class="modal-body">
-                    <div <?=$WITH_FORM?> >
+
                         <form id="<?=$FORM_ID?>"
                               enctype="multipart/form-data"
                               method="POST"
@@ -46,7 +30,7 @@ $WITH_FORM = strlen($arParams['WIDTH_FORM']) > 0 ? 'style="max-width:'.$arParams
                             </div>
 
                             <input type="hidden" name="FORM_ID" value="<?=$FORM_ID?>">
-                            <input type="text" name="ANTIBOT[NAME]" value="<?=$arResult['ANTIBOT']['NAME'];?>" class="d-none">
+                            <input type="text" name="ANTIBOT[NAME]" value="<?=$arResult['ANTIBOT']['NAME'];?>" class="d-none antibot">
 
                             <?//hidden fields
                             foreach($arResult['FORM_FIELDS'] as $fieldCode => $arField)
@@ -209,30 +193,7 @@ $WITH_FORM = strlen($arParams['WIDTH_FORM']) > 0 ? 'style="max-width:'.$arParams
                                 </div>
                             <?endif;?>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <?if($arParams['SHOW_MODAL'] == 'Y'):?>
-        <div class="modal fade modal-add-holiday" id="frm-modal-<?=$FORM_ID?>"  role='dialog' aria-hidden='true'>
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header clearfix">
-                        <? if($arParams['TITLE_SHOW_MODAL'] || $arParams['FORM_NAME']): ?>
-                            <h5 class="modal-title" id="makeOrderLabel"><?=$arParams['TITLE_SHOW_MODAL'] ? : $arParams['FORM_NAME']?></h5>
-                        <? endif?>
-                        <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&#10006;</button>
-                    </div>
-                    <div class="modal-body">
-                        <p class="ok-text"><?=$arParams['OK_TEXT']?></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?endif;?>
-</div>
 
 <script type="text/javascript">
     var easyForm = new JCEasyForm(<?echo CUtil::PhpToJSObject($arParams)?>);

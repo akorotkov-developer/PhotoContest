@@ -1,6 +1,12 @@
 .slam-easyform .modal {
     text-align: center;
 }
+.webform-field-upload {
+    display: none;
+}
+.antibot {
+    display: none;
+}
 
 @media screen and (min-width: 768px) {
     .slam-easyform .modal:before {
@@ -53,4 +59,7 @@
     border: 2px solid #ccc;
     border-top-color: #333;
     animation: spinner .6s linear infinite
+}
+#feedback-modal {
+    overflow-y: auto;
 }

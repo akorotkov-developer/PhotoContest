@@ -1,8 +1,10 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+$assets = \Bitrix\Main\Page\Asset::getInstance();
+?>
 
 <footer class="footer">
-    <div class="container">
-        <nav class="footer-nav">
+    <div class="centerBlock">
+        <div class="footer__inner">
             <?$APPLICATION->IncludeComponent(
                 "bitrix:menu",
                 "bottom-menu",
@@ -22,11 +24,17 @@
                 ),
                 false
             );?>
-        </nav>
+        </div>
     </div>
 </footer>
 
 
+<script src="<?=SITE_TEMPLATE_PATH?>/js/main.min.js"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/vendor.min.js"></script>
+<?/*
+$assets->addJs(SITE_TEMPLATE_PATH."/js/main.min.js");
+$assets->addJs(SITE_TEMPLATE_PATH."/js/vendor.min.js");*/
+?>
 <!-- Facebook Pixel Code -->
 
 <script>
@@ -60,8 +68,6 @@
 /></noscript>
 
 <!-- End Facebook Pixel Code -->
-
-
 
 <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?162",t.onload=function(){VK.Retargeting.Init("VK-RTRG-399919-4hz7t"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-399919-4hz7t" style="position:fixed; left:-999px;" alt=""/></noscript>
 </body>
