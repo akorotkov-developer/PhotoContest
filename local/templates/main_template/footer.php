@@ -5,25 +5,20 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 <footer class="footer">
     <div class="centerBlock">
         <div class="footer__inner">
-            <?$APPLICATION->IncludeComponent(
-                "bitrix:menu",
-                "bottom-menu",
-                array(
-                    "ROOT_MENU_TYPE" => "top",
-                    "MAX_LEVEL" => "1",
-                    "CHILD_MENU_TYPE" => "top",
-                    "USE_EXT" => "Y",
-                    "DELAY" => "N",
-                    "ALLOW_MULTI_SELECT" => "Y",
-                    "MENU_CACHE_TYPE" => "N",
-                    "MENU_CACHE_TIME" => "3600",
-                    "MENU_CACHE_USE_GROUPS" => "Y",
-                    "MENU_CACHE_GET_VARS" => array(
-                    ),
-                    "COMPONENT_TEMPLATE" => "top-menu"
-                ),
-                false
-            );?>
+            <nav class="footer-logo">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-list__element"><a class="logo logo__footer" href="http://www.rushydro.ru" title="На главную РусГидро"></a></li>
+                </ul>
+            </nav>
+            <nav class="footer-nav">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-list__element"><a class="footer-nav-list__element__link" href="#konkurs" title="Информация о конкурсе">О конкурсе</a></li>
+                    <li class="footer-nav-list__element"><a class="footer-nav-list__element__link" href="#bonus" title="Победителям">Итоги</a></li>
+                    <li class="footer-nav-list__element"><a class="footer-nav-list__element__link " href="#bonus" title="Победителям">Победителям</a></li>
+                    <li class="footer-nav-list__element"><a class="footer-nav-list__element__link " href="#jury" title="Жюри">Жюри</a></li>
+                    <li class="footer-nav-list__element"><a class="footer-nav-list__element__link " href="#feedback" title="СВЯЗАТЬСЯ С ОРГОКОМИТЕТОМ">Связаться С ОРГОКОМИТЕТОМ</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 </footer>

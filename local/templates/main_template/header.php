@@ -23,25 +23,41 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 </head>
 <body>
 <header class="header">
-    <?$APPLICATION->IncludeComponent(
-        "bitrix:menu",
-        "top-menu",
-        array(
-            "ROOT_MENU_TYPE" => "top",
-            "MAX_LEVEL" => "1",
-            "CHILD_MENU_TYPE" => "top",
-            "USE_EXT" => "Y",
-            "DELAY" => "N",
-            "ALLOW_MULTI_SELECT" => "Y",
-            "MENU_CACHE_TYPE" => "N",
-            "MENU_CACHE_TIME" => "3600",
-            "MENU_CACHE_USE_GROUPS" => "Y",
-            "MENU_CACHE_GET_VARS" => array(
-            ),
-            "COMPONENT_TEMPLATE" => "top-menu"
-        ),
-        false
-    );?>
+    <nav class="main-nav">
+        <div class="centerBlock">
+            <ul class="main-nav-list">
+                <li class="main-nav-list__element"><a class="main-nav-list__element__link" href="#konkurs" title="Информация о конкурсе">О КОНКУРСЕ</a></li>
+                <li class="main-nav-list__element"><a class="main-nav-list__element__link" href="#bonus" title="Победителям">ИТОГИ</a></li>
+                <li class="main-nav-list__element"><a class="main-nav-list__element__link" href="#win" title="Победители">Победители</a></li>
+                <li class="main-nav-list__element"><a class="main-nav-list__element__link" href="#jury" title="Жюри">Жюри</a></li>
+                <li class="main-nav-list__element"><a class="main-nav-list__element__link" href="#feedback" title="СВЯЗАТЬСЯ С ОРГОКОМИТЕТОМ">СВЯЗАТЬСЯ С ОРГОКОМИТЕТОМ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="navigationMobile">
+        <input id="hamburger" class="hamburger" type="checkbox">
+        <label class="hamburger" for="hamburger">
+            <i></i>
+            <text>
+                <close>закрыть</close>
+                <open>открыть</open>
+            </text>
+        </label>
+        <section class="drawer-list">
+            <ul class="">
+                <li><a href="#konkurs">О КОНКУРСЕ</a>
+                </li>
+                <li><a href="#bonus">ИТОГИ</a>
+                </li>
+                <li><a href="#win">Победители</a>
+                </li>
+                <li><a href="#jury">Жюри</a>
+                </li>
+                <li><a href="#feedback">СВЯЗАТЬСЯ С ОРГОКОМИТЕТОМ</a>
+                </li>
+            </ul>
+        </section>
+    </div>
 </header>
 
 <div class="panel">
